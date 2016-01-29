@@ -1,6 +1,11 @@
 # JavaScript (ES5)
 
-## Covered by ESLint
+- [General](#general)
+- [Covered by ESLint Plugin](#covered-by-eslint-plugin)
+
+## General
+
+## Covered by [ESLint Plugin](https://github.com/akullpp/eslint-plugin-skeleton)
 
 ### No comma dangle
 
@@ -18,7 +23,7 @@ var foo = [
 ];
 ```
 
-# No assignment in conditionals
+### No assignment in conditionals
 
 Exception: In `while` and `do...while`.
 
@@ -29,7 +34,7 @@ if (foo = 0) {
 }
 ```
 
-# No console
+### No console
 
 Exception: In `node` environment.
 
@@ -38,7 +43,7 @@ Exception: In `node` environment.
 console.log();
 ```
 
-# No constants in conditionals
+### No constants in conditionals
 
 ```js
 // Wrong
@@ -47,7 +52,7 @@ if (true) {
 }
 ```
 
-# No control characters in Regular Expressions
+### No control characters in Regular Expressions
 
 ASCII characters ranging from 0 to 31.
 
@@ -56,14 +61,14 @@ ASCII characters ranging from 0 to 31.
 var foo = /\\x1f/;
 ```
 
-# No debugger
+### No debugger
 
 ```js
 // Wrong
 debugger;
 ```
 
-# No duplicate arguments
+### No duplicate arguments
 
 ```js
 // Wrong
@@ -72,7 +77,7 @@ function (foo, bar, foo) {
 }
 ```
 
-# No duplicate keys
+### No duplicate keys
 
 ```js
 // Wrong
@@ -82,7 +87,7 @@ var foo = {
 }
 ```
 
-# No duplicate case labels
+### No duplicate case labels
 
 ```js
 // Wrong
@@ -98,14 +103,14 @@ switch (foo) {
 }
 ```
 
-# No empty character class in Regular Expressions
+### No empty character class in Regular Expressions
 
 ```js
 // Wrong
 var foo = /^abc[]/;
 ```
 
-# No empty statements
+### No empty statements
 
 ```js
 // Wrong
@@ -113,7 +118,7 @@ if (foo) {
 }
 ```
 
-# No assignment to the exception parameter
+### No assignment to the exception parameter
 
 ```js
 // Wrong
@@ -124,7 +129,7 @@ try {
 }
 ```
 
-# No extra boolean cast
+### No extra boolean cast
 
 ```js
 // Wrong
@@ -133,14 +138,14 @@ if (!!foo) {
 }
 ```
 
-# No extra semicolons
+### No extra semicolons
 
 ```js
 // Wrong
 var foo;;
 ```
 
-# No reassignments of function declarations
+### No reassignments of function declarations
 
 ```js
 // Wrong
@@ -150,7 +155,7 @@ function foo() {
 foo = 'bar';
 ```
 
-# No function declarations in nested blocks
+### No function declarations in nested blocks
 
 ```js
 // Wrong
@@ -161,14 +166,14 @@ if (foo) {
 }
 ```
 
-# No invalid string arguments in RegExp constructor
+### No invalid string arguments in RegExp constructor
 
 ```js
 // Wrong
 var foo = new RegExp('[');
 ```
 
-# No irregular whitespaces
+### No irregular whitespaces
 
 ```js
 function foo()\u00A0{
@@ -176,7 +181,7 @@ function foo()\u00A0{
 }
 ```
 
-# No negation of the left hand side in conditionals
+### No negation of the left hand side in conditionals
 
 ```js
 // Wrong
@@ -185,14 +190,14 @@ if (!foo in bar) {
 }
 ```
 
-# No invokation of capitalized global objects
+### No invokation of capitalized global objects
 
 ```js
 // Wrong
 Math();
 ```
 
-# No multiple spaces in Regular Expressions
+### No multiple spaces in Regular Expressions
 
 ```js
 // Wrong
@@ -202,14 +207,14 @@ var foo = /a   b/;
 var foo = /a {3}b/;
 ```
 
-# No spares arrays
+### No spares arrays
 
 ```js
 // Wrong
 var foo = [1,,3];
 ```
 
-# No unexpected multilines
+### No unexpected multilines
 
 ```js
 // Wrong
@@ -221,7 +226,7 @@ var foo = 'baz';
 (1 || 2).baz();
 ```
 
-# No unreachable code
+### No unreachable code
 
 ```js
 // Wrong
@@ -232,7 +237,7 @@ function foo () {
 }
 ```
 
-# NaN comparisons
+### NaN comparisons
 
 ```js
 // Wrong
@@ -246,7 +251,7 @@ if (isNaN(foo)) {
 }
 ```
 
-# Valid typeof strings
+### Valid typeof strings
 
 ```js
 // Wrong
