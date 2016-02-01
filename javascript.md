@@ -1,4 +1,4 @@
-# JavaScript (ES5)
+# ES5
 
 - [General](#general)
 - [Covered by ESLint Plugin](#covered-by-eslint-plugin)
