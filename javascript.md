@@ -3,6 +3,20 @@
 - [General](#general)
 - [Covered by ESLint Plugin](#covered-by-eslint-plugin)
     - [Possible Errors](#possible-errors)
+        - [comma-dangle](#comma-dangle)
+        - [no-cond-assign](#no-cond-assign)
+        - [no-console](#no-console)
+        - [no-constant-condition](#no-constant-condition)
+        - [no-control-regex](no-control-regex)
+        - [no-debugger](#no-debugger)
+        - [no-dupe-args](#no-dupe-args)
+        - [no-dupe-keys](#no-dupe-keys)
+        - [no-duplicate-case](#no-duplicate-case)
+        - [no-empty-character-class](#no-empty-character-class)
+        - [no-empty](#no-empty)
+        - [no-ex-assign](#no-ex-assign)
+        - [no-extra-boolean-cast](#no-extra-boolean-cast)
+        - [no-extra-parens](#no-extra-parens)
     - [Best Practices](#best-practices)
     - [Strict](#strict)
     - [Variables](#variables)
@@ -25,7 +39,9 @@ function () {
 
 ### Possible Errors
 
-#### No comma dangle
+#### comma-dangle
+
+No comma dangle in arrays or objects.
 
 ```js
 // Wrong
@@ -41,7 +57,9 @@ var foo = [
 ];
 ```
 
-#### No assignment in conditionals
+#### no-cond-assign
+
+No assignment in conditionals.
 
 Exception: In `while` and `do...while`.
 
@@ -52,7 +70,9 @@ if (foo = 0) {
 }
 ```
 
-#### No console
+#### no-console
+
+No console.
 
 Exception: In `node` environment.
 
@@ -61,7 +81,9 @@ Exception: In `node` environment.
 console.log();
 ```
 
-#### No constants in conditionals
+#### no-constant-condition
+
+No constants in conditionals.
 
 ```js
 // Wrong
@@ -70,23 +92,27 @@ if (true) {
 }
 ```
 
-#### No control characters in Regular Expressions
+####  no-control-regex
 
-ASCII characters ranging from 0 to 31.
+No ASCII characters ranging from 0 to 31 in Regular Expressions.
 
 ```js
 // Wrong
 var foo = /\\x1f/;
 ```
 
-#### No debugger
+#### no-debugger
+
+No debugger.
 
 ```js
 // Wrong
 debugger;
 ```
 
-#### No duplicate arguments
+#### no-dupe-args
+
+No duplicate arguments.
 
 ```js
 // Wrong
@@ -95,7 +121,9 @@ function (foo, bar, foo) {
 }
 ```
 
-#### No duplicate keys
+#### no-dupe-keys
+
+No duplicate keys.
 
 ```js
 // Wrong
@@ -105,7 +133,9 @@ var foo = {
 }
 ```
 
-#### No duplicate case labels
+#### no-duplicate-case
+
+No duplicate case labels.
 
 ```js
 // Wrong
@@ -121,14 +151,18 @@ switch (foo) {
 }
 ```
 
-#### No empty character class in Regular Expressions
+#### no-empty-character-class
+
+No empty character class in Regular Expressions
 
 ```js
 // Wrong
 var foo = /^abc[]/;
 ```
 
-#### No empty statements
+#### no-empty
+
+No empty statements.
 
 ```js
 // Wrong
@@ -136,7 +170,9 @@ if (foo) {
 }
 ```
 
-#### No assignment to the exception parameter
+#### no-ex-assign
+
+No assignment to the exception parameter.
 
 ```js
 // Wrong
@@ -147,7 +183,9 @@ try {
 }
 ```
 
-#### No extra boolean cast
+#### no-extra-boolean-cast
+
+No extra boolean cast.
 
 ```js
 // Wrong
@@ -155,6 +193,10 @@ if (!!foo) {
     // ...
 }
 ```
+
+#### no-extra-parens
+
+Rule is disabled.
 
 #### No extra semicolons
 

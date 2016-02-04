@@ -73,7 +73,7 @@ angular.module('baz', [])
 
 ## Directives
 
-### Element Directives
+### Component Directives
 
 1. Always prefix
 2. Always restrict to `E` or `A`
@@ -108,7 +108,7 @@ function BarController() {
 }
 ```
 
-### Attribute Directives
+### Validation Directives
 
 1. Separate link function
 2. The names of the parameters are always `scope`, `elem`, `attrs`, `ctrl` or `ctrls` if an array is required.
@@ -151,6 +151,64 @@ function FooController() {
     angular.extend(vm, {
         // Functions
     });
+}
+```
+
+## Service/Factory
+
+1. Avoid technical suffixes.
+2. Services have lowercase names.
+3. Factories have uppercase names.
+4. Use services if no resource model is required.
+
+### Service Pattern
+
+```js
+function myService() {
+    return {
+        foo: foo
+    };
+
+    var bar = 'bar';
+
+    function foo() {
+        // ...
+    }
+}
+```
+
+### Resource Model Pattern
+
+Represents the model layer and allows to map HAL resources. It emulates object-oriented programming by allowing for Constructors and creating instances with the `new` keyword.
+
+```js
+angular
+    .module(foo.bar, [])
+    .factory('Bar', Bar);
+
+function Bar(
+    // Dependencies
+) {
+    function Bar(
+        // Parameters
+        resource
+    ) {
+        // Instance
+        var bar = angular.extend({
+            // Variables
+        }, resource);
+
+        angular.extend(bar, {
+            // Instance methods
+        });
+
+        return bar;
+    }
+    angular.extend(Bar, {
+        // Static class functions
+    });
+
+    return Bar;
 }
 ```
 
