@@ -24,46 +24,52 @@ If you don't care about HTML5 conformity, you won't need to do this.
 
 ### General
 
-1. The order of attributes should be consistent and preferably: id > class > name > custom > third-party > Angular > validation, e.g.
+1. The order of attributes should be consistent and preferably:
 
-```html
-<input id="foo"
-       class="bar"
-       data-ak-foo
-       data-ui-foo
-       data-ng-bind
-       required>
-```
+    ```
+    id > class > name > custom > third-party > Angular > validation
+    ```
+
+    For example:
+
+    ```html
+    <input id="foo"
+        class="bar"
+        data-ak-foo
+        data-ui-foo
+        data-ng-bind
+        required>
+    ```
 
 2. Elements with attributes on multiple lines should follow this pattern:
 
-```html
-<input data-ng-bind=""
-       data-ng-required="">
-```
+    ```html
+    <input data-ng-bind=""
+        data-ng-required="">
+    ```
 
 3. Empty elements should close on the same line:
 
-```html
-<!-- Wrong -->
-<span data-ng-bind=""
-      data-ng-required="">
-</span>
+    ```html
+    <!-- Wrong -->
+    <span data-ng-bind=""
+        data-ng-required="">
+    </span>
 
-<!-- Correct -->
-<span data-ng-bind=""
-      data-ng-required=""></span>
-```
+    <!-- Correct -->
+    <span data-ng-bind=""
+        data-ng-required=""></span>
+    ```
 
 4. Multiple elements on the same indentation level should be separated visually by newlines:
 
-```html
-<div></div>
+    ```html
+    <div></div>
 
-<div></div>
+    <div></div>
 
-<div></div>
-```
+    <div></div>
+    ```
 
 ## AngularJS
 
@@ -269,21 +275,21 @@ Use `component`.
 1. Used for DOM-manipulations and validation
 2. The parameters of the link function are always named `scope`, `elem`, `attrs`, `ctrl` or `ctrls` if you have an array.
 
-```js
-angular
-    .module('foo.bar.ui', [])
-    .directive('fooBar', fooBar)
+    ```js
+    angular
+        .module('foo.bar.ui', [])
+        .directive('fooBar', fooBar)
 
-function fooBar() {
-    return {
-        restrict: 'A',
-        require: 'ngModel',
-        link:  function link(scope, elem, attrs, ctrl) {
-            // ...
-        }
-    };
-}
-```
+    function fooBar() {
+        return {
+            restrict: 'A',
+            require: 'ngModel',
+            link:  function link(scope, elem, attrs, ctrl) {
+                // ...
+            }
+        };
+    }
+    ```
 
 ### Filter
 
