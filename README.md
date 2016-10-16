@@ -2,6 +2,10 @@
 
 Lessons learned from dozens of Angular enterprise projects.
 
+A small glimpse of a concrete application can be found at [akSkeleton](https://github.com/akullpp/akSkeleton).
+
+## Table Of Contents
+
 * [EcmaScript 5](#ecmascript-5)
 * [HTML](#html)
     * [HTML5 Conformity](#html5-conformity)
