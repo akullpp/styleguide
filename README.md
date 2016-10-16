@@ -4,7 +4,35 @@ Lessons learned from dozens of Angular enterprise projects.
 
 * [EcmaScript 5](#ecmascript-5)
 * [HTML](#html)
+    * [HTML5 Conformity](#html5-conformity)
+    * [General](#general)
 * [AngularJS](#angularjs)
+    * [Folder Structure](#folder-structure)
+    * [Names](#names)
+        * [Modules](#modules)
+        * [Layers](#layers)
+        * [States](#states)
+        * [Components, Directives and Filters](#components-directives-and-filters)
+    * [Databinding](#databinding)
+    * [Module](#module)
+    * [Dependency Injection](#dependency-injection)
+    * [Components](components)
+        * [IIFE](#iife)
+        * [Constants](#constants)
+        * [Component](#component)
+        * [Directives](#directives)
+            * [Element Directives](#element-directives)
+            * [Attribute Directives](#attribute-directives)
+        * [Filter](#filter)
+        * [Controller](#controller)
+        * [Services](#services)
+            * [Service pattern](#service-pattern)
+            * [Resource Model Pattern](#resource-model-pattern)
+    * [Promises](#promises)
+    * [Scope, Watches, Emits, Broadcasts](#scope-watches-emits-broadcasts)
+    * [Wrapper](#wrapper)
+    * [Third-party libraries](third-party-libraries)
+    * [Software Engineering Principles](software-engineering-principles)
 
 ## EcmaScript 5
 
@@ -145,7 +173,7 @@ States are very tied to modules, e.g.
     }
 ```
 
-### Components, directives and Filters
+#### Components, Directives and Filters
 
 These components always have the project prefix, e.g. `akCustomers`:
 
@@ -293,7 +321,7 @@ Use `component`.
 
 ### Filter
 
-Vermeiden wenn mÃ¶glich, da sie sehr teuer sind.
+Use sparingly since they are very costly.
 
 ### Controller
 
